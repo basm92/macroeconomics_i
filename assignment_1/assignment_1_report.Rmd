@@ -1,0 +1,52 @@
+---
+title: "Macroeconomics I: Report"
+author: "Barend Spanjers, Elisa de Weerd, Bas Machielsen"
+date: "11/11/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Question 1
+
+The code for question 1 is available at [https://github.com/basm92/macroeconomics_i/blob/master/assignment_1/question1_main.ipynb](https://github.com/basm92/macroeconomics_i/blob/master/assignment_1/question1_main.ipynb). This is both downloadable and can then be run via Jupyter notebooks, but Github also renders the output of the code and creation of the figure. No additional Python libraries are required other than the standard libraries that come with e.g. the Conda implementation of Python.
+
+1. Include the plot and  Carefully discuss the economic intuition for the differences between the
+time paths for $\sigma = 1$ and $\sigma = 5$.
+
+```{r, include=TRUE, fig.align="center", fig.cap=c("Plot for Question 1"), echo=FALSE}
+knitr::include_graphics("./question1_fig.pdf")
+```
+
+
+## Queston 2
+
+The code for question 1 is available at [https://github.com/basm92/macroeconomics_i/blob/master/assignment_1/question2_main.ipynb](https://github.com/basm92/macroeconomics_i/blob/master/assignment_1/question2_main.ipynb). This is both downloadable and can then be run via Jupyter notebooks, but Github also renders the output of the code and creation of the figure. No additional Python libraries are required other than the standard libraries that come with e.g. the Conda implementation of Python.
+
+1. Solve equation (2) for $\mu(t)$ and substitute the result in equation (1). Use the result to write down the Bellman equation with both control variables eliminated.
+
+We find that:
+
+$$
+\mu(t) = \frac{(1-\phi)M(t) - M(t+1)}{\gamma K(t)^\alpha} + 1
+$$
+Substituting that in the definition for $c(t)$ gives us an expression for $c(t)$ that depends only on the state variables $M(t), M(t+1), K(t), K(t+1)$. The Bellman equation in terms of consumption choices is:
+
+$$
+V(c(t)) = \max_{c(t)} \{U(c(t) + V(c(t+1))\}
+$$
+After substituting in relevant definitions for $c(t)$ and $c(t+1)$ in terms of the state variables, we can numerically solve for $V$ while controlling $K(t+1), M(t+1)$, starting from $K_0$ and $M_0$, with an initial guess that $V(.) = 0$. We have to satisfy two feasibility constraints: $c(t) > 0$ for all $t$ and $0 \leq \mu(t) \geq 1$. 
+
+2. Plot the paths of $K(t), M(t), c(t)$ and $\mu(t)$ for 100 periods. In the plot for a given variable, include both the path induced by $\beta = 0.75$ and the path induced by $\beta = 0.85$ for easy comparison.
+
+
+```{r, include=TRUE, fig.align="center", fig.cap=c("Plot for Question 1"), echo=FALSE}
+knitr::include_graphics("./question2_fig.pdf")
+```
+
+3. Explain the overall qualitative pattern of the plots. Do capital and carbon con-verge to steady-state values? If so, is convergence monotone? Provide an intuitive economic story that accounts for this pattern.
+
+4. Discuss the differences between the plots for $\beta = 0.75$ and $\beta= 0.85$. Provide an intuitive economic story that accounts for these differences.
+
