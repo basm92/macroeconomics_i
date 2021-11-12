@@ -23,7 +23,7 @@ knitr::include_graphics("./question1_fig.pdf")
 ```
 
 
-## Queston 2
+## Question 2
 
 The code for question 1 is available at [https://github.com/basm92/macroeconomics_i/blob/master/assignment_1/question2_main.ipynb](https://github.com/basm92/macroeconomics_i/blob/master/assignment_1/question2_main.ipynb). This is both downloadable and can then be run via Jupyter notebooks, but Github also renders the output of the code and creation of the figure. No additional Python libraries are required other than the standard libraries that come with e.g. the Conda implementation of Python.
 
