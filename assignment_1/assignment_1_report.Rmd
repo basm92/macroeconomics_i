@@ -16,6 +16,8 @@ The code for question 1 is available at [https://github.com/basm92/macroeconomic
 1. Include the plot and  Carefully discuss the economic intuition for the differences between the
 time paths for $\sigma = 1$ and $\sigma = 5$.
 
+Test
+
 ```{r, include=TRUE, fig.align="center", fig.cap=c("Plot for Question 1"), echo=FALSE}
 knitr::include_graphics("./question1_fig.pdf")
 ```
