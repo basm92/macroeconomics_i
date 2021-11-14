@@ -13,8 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 The code for question 1 is available at [https://github.com/basm92/macroeconomics_i/blob/master/assignment_1/question1_main.ipynb](https://github.com/basm92/macroeconomics_i/blob/master/assignment_1/question1_main.ipynb). This is both downloadable and can then be run via Jupyter notebooks, but Github also renders the output of the code and creation of the figure. No additional Python libraries are required other than the standard libraries that come with e.g. the Conda implementation of Python.
 
-1. Include the plot and  Carefully discuss the economic intuition for the differences between the
-time paths for $\sigma = 1$ and $\sigma = 5$.
+1. Include the plot and  Carefully discuss the economic intuition for the differences between the time paths for $\sigma = 1$ and $\sigma = 5$.
 
 In the plot below one clearly observes two main differences between the Policy Paths from $K_0$ for $\sigma=1$ and $\sigma=5$. First, the steady state for the path with $\sigma=5$ is lower than the steady state with $\sigma=1$. Second, the Policy Path with $\sigma=1$ converges faster to its steady state than with $\sigma=5$. 
 
@@ -26,6 +25,11 @@ $\sigma$ can be seen as the elasticity of substitution parameter. That is, for h
 knitr::include_graphics("./question1_fig.pdf")
 ```
 
+We see in Figure 1 that the optimal capital chosen increases monotonically with time $t$.
+
+When $\sigma = 1$, we see that the optimal capital chosen steeply increases with time $t$, until it reaches the steady state of $22.96$ at about $t = 75$. When $\sigma = 5$, the optimal capital chosen also monotonically increases with time $t$, but at a lower rate, until it reaches the steady state $22.96$ at about time $t = 145$. Both policy functions are concave. Note that given $\sigma$, the theoretical steady state of the model is $22.96$. Because of our grid, we see that in the figure the steady states in the model with $\sigma = 1$ and $\sigma = 5$ differ a bit numerically.
+
+We find that the derivative of the utility function is $\sigma$, thus $\sigma$ represents the marginal utility of consumption. If $\sigma$ is higher, we care more about additional consumption. Thus, we expect that with $\sigma = 5$ compared to $\sigma = 1$, people prefer additional consumption over investment in future capital, and thus it takes people longer to get to the steady state. This is also what we see in Figure 1: with a higher $\sigma$, the optimal capital chosen increases more slowly to the steady state.
 
 ## Question 2
 
