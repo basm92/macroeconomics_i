@@ -13,7 +13,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 The code for question 1 is available at [https://github.com/basm92/macroeconomics_i/blob/master/assignment_1/question1_main.ipynb](https://github.com/basm92/macroeconomics_i/blob/master/assignment_1/question1_main.ipynb). This is both downloadable and can then be run via Jupyter notebooks, but Github also renders the output of the code and creation of the figure. No additional Python libraries are required other than the standard libraries that come with e.g. the Conda implementation of Python.
 
-1. Include the plot and carefully discuss the economic intuition for the differences between the time paths for $\sigma = 1$ and $\sigma = 5$.
+1. Include the plot and  Carefully discuss the economic intuition for the differences between the time paths for $\sigma = 1$ and $\sigma = 5$.
+
+In the plot below one clearly observes two main differences between the Policy Paths from $K_0$ for $\sigma=1$ and $\sigma=5$. First, the steady state for the path with $\sigma=5$ is lower than the steady state with $\sigma=1$. Second, the Policy Path with $\sigma=1$ converges faster to its steady state than with $\sigma=5$. 
+
+Note that the derivative $\frac{\partial u(c)}{\partial c}=c^{-\sigma}$ for $\sigma \not=1$ and $\frac{\partial u(c)}{\partial c}=c^{-1}$ for $\sigma=1$. That is, utility is increasing in consumption, but, for higher $\sigma$, the utility will increase slower than for lower $\sigma$.   
+
+$\sigma$ can be seen as the elasticity of substitution parameter. That is, for higher $\sigma$, one needs more of the good (in this case consumption) to achieve a certain level of utility compared to a lower $\sigma$. 
 
 ```{r, include=TRUE, fig.align="center", fig.cap=c("Plot for Question 1"), echo=FALSE}
 knitr::include_graphics("./question1_fig.pdf")
@@ -52,5 +58,10 @@ knitr::include_graphics("./question2_fig.pdf")
 
 3. Explain the overall qualitative pattern of the plots. Do capital and carbon con-verge to steady-state values? If so, is convergence monotone? Provide an intuitive economic story that accounts for this pattern.
 
+In the plots we can clearly see that after approximately 30 periods we have that all variables (policy path, emission, abatement rate and consumption) converge to steady state values. Interestingly, we observe a non-monotone convergence for the policy path and consumption. That is, before the steady state is achieved, $K$ and consumption first peak and afterwards slowly depreciate to their steady states. An intuitive economic story that could explain this result is the fact that when decisions on climate change policies have been made, governments and individuals (or firms) need to invest first to make sure that there are enough resources to decrease or stabilize emissions. As an example, suppose the world leaders agree on the idea that we can only use renewable energy in 30 years. Then, we need additional capital to do research and to invest in new technologies. Also, households will consume more, by buying for instance solar panels or to insulate their houses. Therefore, it makes sense that we  observe a peak in capital and consumption before we reach steady state. 
+
 4. Discuss the differences between the plots for $\beta = 0.75$ and $\beta= 0.85$. Provide an intuitive economic story that accounts for these differences.
 
+$\beta$ represents the discounting of the future. That is, lower $\beta$ implies that the future is less important for the model. Therefore, in expectation, the steady state emissions should be higher for lower $\beta$. Intuitively, suppose an agent who discounts the future with a value of 0.99 (i.e. there is only little discounting). Then the agents cares a lot about the future and therefore also about future externalities of climate change. Therefore, the agent is willing to invest a lot at $t=0$ in order to prevent the negative externalities from occurring. On the other hand, suppose an agent discounts with $\beta=0.5$. Then the agent values next period with only half of the value of the current period. Therefore, future negative externalities are less important and the agent will invest less in emmission reducing technologies.  
+
+If we look at the emission path for $M_0$, we indeed observe this pattern. For $\beta=0.75$, one can clearly see that the emissions will be higher compared to the path for $\beta=0.85$. 
