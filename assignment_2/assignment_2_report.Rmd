@@ -1,0 +1,13 @@
+---
+title: "Macroeconomics I: Report"
+author: "Barend Spanjers, Elisa de Weerd, Bas Machielsen"
+date: "11/11/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Question 1
+
